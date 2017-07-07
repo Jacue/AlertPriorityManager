@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LNAlertProtocol.h"
 #import <UIKit/UIKit.h>
+
+
+@protocol LNAlertProtocol <NSObject>
+
+// 弹窗的优先级
+- (NSInteger)level;
+
+// 弹窗顶替时隐藏弹窗
+- (void)dismissWithCompletion:(void(^)(void))completionBlock;
+
+@end
+
 
 @interface LNAlertManager : NSObject
 
@@ -20,7 +31,7 @@
  @param alertView 弹层
  @param alertBlock 弹层的展示操作
  */
-- (void)show:(UIView<LNAlertProtocol> *)alertView showBlock:(void(^)(void))alertBlock;
+- (void)show:(id<LNAlertProtocol>)alertView showBlock:(void(^)(void))alertBlock;
 
 
 /**

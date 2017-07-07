@@ -7,7 +7,6 @@
 //
 
 #import "LNAlertView.h"
-#import "LNAlertManager.h"
 
 @implementation LNAlertView
 

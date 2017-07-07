@@ -45,7 +45,6 @@
 		4BC119BE1F0E370A0010B22A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BC119C11F0E370A0010B22A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BC119C31F0E370A0010B22A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BC119CF1F0E37DC0010B22A /* LNAlertProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNAlertProtocol.h; sourceTree = "<group>"; };
 		4BC119D31F0E38B70010B22A /* LNAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNAlertManager.h; sourceTree = "<group>"; };
 		4BC119D41F0E38B70010B22A /* LNAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNAlertManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +103,6 @@
 				4BC119B81F0E370A0010B22A /* ViewController.h */,
 				4BC119B91F0E370A0010B22A /* ViewController.m */,
 				4BC119BB1F0E370A0010B22A /* Main.storyboard */,
-				4BC119CF1F0E37DC0010B22A /* LNAlertProtocol.h */,
 				4BC119D31F0E38B70010B22A /* LNAlertManager.h */,
 				4BC119D41F0E38B70010B22A /* LNAlertManager.m */,
 				4B0925861F0F234D00724BDA /* AlertView */,

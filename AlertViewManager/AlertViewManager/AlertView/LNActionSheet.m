@@ -7,7 +7,6 @@
 //
 
 #import "LNActionSheet.h"
-#import "LNAlertManager.h"
 
 @implementation LNActionSheet
 

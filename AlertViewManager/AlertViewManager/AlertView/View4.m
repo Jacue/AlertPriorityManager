@@ -7,7 +7,6 @@
 //
 
 #import "View4.h"
-#import "LNAlertManager.h"
 
 @implementation View4
 

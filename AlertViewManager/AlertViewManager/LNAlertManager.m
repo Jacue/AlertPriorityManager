@@ -13,10 +13,10 @@ typedef void(^AlertBlock)(void);
 @interface LNAlertManager ()
 
 // 当前展示的弹层对象（如果用户手动关闭弹层，需还原为初始值），当被优先级高的顶替时，需更新为最新的弹层对象
-@property (nonatomic,strong) UIView<LNAlertProtocol> *currentAlertView;
+@property (nonatomic,strong) id<LNAlertProtocol> currentAlertView;
 @property (nonatomic,copy) AlertBlock currentAlertBlock;
 // 延迟展示的（优先级低的）弹层对象数组（场景1:优先级低->优先级高；场景2:优先级高->优先级低）
-@property (nonatomic,strong) NSMutableArray<UIView<LNAlertProtocol> *> *lowPriorityAlertViewArray;
+@property (nonatomic,strong) NSMutableArray<id<LNAlertProtocol>> *lowPriorityAlertViewArray;
 // 延迟展示的弹层操作
 @property (nonatomic,strong) NSMutableArray<AlertBlock> *lowPriorityAlertBlockArray;
 
@@ -66,7 +66,7 @@ typedef void(^AlertBlock)(void);
         // 手动隐藏当前弹层后，展示被顶替的弹层数组中优先级最高的那一个
         if (self.lowPriorityAlertViewArray.count > 0) {
             NSInteger index = [self indexOfHightestPriorityAlertView];
-            UIView<LNAlertProtocol> *alertView = self.lowPriorityAlertViewArray[index];
+            id<LNAlertProtocol> alertView = self.lowPriorityAlertViewArray[index];
             AlertBlock block = self.lowPriorityAlertBlockArray[index];
             
             [self show:alertView showBlock:block];
@@ -85,7 +85,7 @@ typedef void(^AlertBlock)(void);
  @param alertView 弹层
  @param alertBlock 弹层的展示操作
  */
-- (void)show:(UIView<LNAlertProtocol> *)alertView showBlock:(void(^)(void))alertBlock{
+- (void)show:(id<LNAlertProtocol> )alertView showBlock:(void(^)(void))alertBlock{
     
     // 1:判断当前是否正在展示alertView之外的弹层，如果没有，展示alertView，并保存优先级和弹层对象
     if (!_currentAlertView) {

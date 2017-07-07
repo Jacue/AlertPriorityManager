@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LNAlertProtocol.h"
+#import "LNAlertManager.h"
 
 @interface LNActionSheet : UIActionSheet<LNAlertProtocol>
 
