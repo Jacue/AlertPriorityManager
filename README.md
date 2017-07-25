@@ -1,4 +1,4 @@
-# FaultTolerant
+# AlertPriorityManager
 管理弹层的优先级
 
 
